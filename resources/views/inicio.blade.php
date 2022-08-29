@@ -5,3 +5,7 @@
 @section('Contenido')
 Inicio
 @endsection
+
+@section('MarcaInicio')
+active
+@endsection

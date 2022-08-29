@@ -5,3 +5,7 @@
 @section('Contenido')
 Trabajos
 @endsection
+
+@section('MarcaTrabajos')
+active
+@endsection

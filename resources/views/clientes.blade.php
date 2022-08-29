@@ -5,3 +5,7 @@
 @section('Contenido')
 Clientes
 @endsection
+
+@section('MarcaClientes')
+active
+@endsection

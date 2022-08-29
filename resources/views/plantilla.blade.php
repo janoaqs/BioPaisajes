@@ -41,23 +41,23 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link @yield('MarcaInicio')" href="index.html">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="about.html">Trabajos</a>
+            <a class="nav-link @yield('MarcaTrabajos')" href="about.html">Trabajos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="property-grid.html">Servicios</a>
+            <a class="nav-link @yield('MarcaServicios')" href="property-grid.html">Servicios</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="blog-grid.html">Nuestros clientes</a>
+            <a class="nav-link @yield('MarcaClientes')" href="blog-grid.html">Nuestros clientes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contáctanos</a>
+            <a class="nav-link @yield('MarcaContacto')" href="contact.html">Contáctanos</a>
           </li>
         </ul>
       </div>
@@ -236,19 +236,14 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
 
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
