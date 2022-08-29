@@ -41,23 +41,23 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaInicio')" href="index.html">Inicio</a>
+            <a class="nav-link @yield('MarcaInicio')" href="{{ route('Inicio') }}">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaTrabajos')" href="about.html">Trabajos</a>
+            <a class="nav-link @yield('MarcaTrabajos')" href="{{ route('Trabajos') }}">Trabajos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaServicios')" href="property-grid.html">Servicios</a>
+            <a class="nav-link @yield('MarcaServicios')" href="{{ route('Servicios') }}">Servicios</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaClientes')" href="blog-grid.html">Nuestros clientes</a>
+            <a class="nav-link @yield('MarcaClientes')" href="{{ route('Clientes') }}">Nuestros clientes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaContacto')" href="contact.html">Contáctanos</a>
+            <a class="nav-link @yield('MarcaContacto')" href="{{ route('Contacto') }}">Contáctanos</a>
           </li>
         </ul>
       </div>
