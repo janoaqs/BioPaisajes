@@ -1,5 +1,5 @@
 @extends('plantilla')
-
+<!-- Título de la vista -->
 @section('Titulo','Clientes')
 
 @section('Contenido')

@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
+
+<!-- Cabecera -->
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <!-- Título de la vista de manera dinámica -->
   <title>@yield('Titulo')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+  <!-- Iconos de favicons -->
+  <link rel="icon" href="{{ asset('assets/img/hoja.png') }}">
   <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png') }}">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <!-- Fuentes de Google -->
+  <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700') }}">
+  <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap') }}">
+  <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Slab:wght@300&display=swap') }}"> 
 
-  <!-- Vendor CSS Files -->
+  <!-- Archivos CSS Vendor -->
   <link rel="stylesheet" href="{{ asset('assets/vendor/animate.css/animate.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
@@ -25,50 +30,55 @@
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
+<!-- Fin de cabecera -->
 
+<!-- Cuerpo -->
 <body>
-  <!-- Cabecera y barra de navegación -->
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
+      <!-- Botón responsive -->
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <a class="navbar-brand text-brand" href="index.html">BIO<span class="color-b">PAISAJES</span></a>
+      <!-- Título de página -->
+      <a class="navbar-brand text-brand" href="{{ route('Inicio') }}">BIO<span class="color-b">PAISAJES</span></a>
 
+      <!-- Menú de navegación -->
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaInicio')" href="{{ route('Inicio') }}">Inicio</a>
+            <a class="nav-link @yield('MarcaInicio')" href="{{ route('Inicio') }}"><span class="color-b">I</span>nicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaTrabajos')" href="{{ route('Trabajos') }}">Trabajos</a>
+            <a class="nav-link @yield('MarcaTrabajos')" href="{{ route('Trabajos') }}"><span class="color-b">T</span>rabajos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaServicios')" href="{{ route('Servicios') }}">Servicios</a>
+            <a class="nav-link @yield('MarcaServicios')" href="{{ route('Servicios') }}"><span class="color-b">S</span>ervicios</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaClientes')" href="{{ route('Clientes') }}">Nuestros clientes</a>
+            <a class="nav-link @yield('MarcaClientes')" href="{{ route('Clientes') }}"><span class="color-b">N</span>uestros clientes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link @yield('MarcaContacto')" href="{{ route('Contacto') }}">Contáctanos</a>
+            <a class="nav-link @yield('MarcaContacto')" href="{{ route('Contacto') }}"><span class="color-b">C</span>ontáctanos</a>
           </li>
         </ul>
       </div>
-
     </div> 
   </nav>
-  <!-- Fin de cabecera y barra de navegación -->
-  
+  <!-- Fin de barra de navegación -->
+
   <!-- Sección principal -->
   <main id="main">
     <section class="section-footer">
+      <!-- Sección de contenido principal -->
       @yield('Contenido')
     </section>  
   </main>
@@ -78,6 +88,7 @@
   <section class="section-footer">
     <div class="container">
       <div class="row">
+        <!-- Columna de información -->
         <div class="col-sm-12 col-md-4">
           <div class="widget-a">
             <div class="w-header-a">
@@ -101,6 +112,9 @@
             </div>
           </div>
         </div>
+        <!-- fin de columna de información -->
+
+        <!-- Columna de la compañia -->
         <div class="col-sm-12 col-md-4 section-md-t3">
           <div class="widget-a">
             <div class="w-header-a">
@@ -110,57 +124,37 @@
               <div class="w-body-a">
                 <ul class="list-unstyled">
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                    <i class="bi bi-chevron-right"></i> <a href="#">Ubicación</a>
                   </li>
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
+                    <i class="bi bi-chevron-right"></i> <a href="#">Representante</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        <!-- fin de la columna de la compañia-->
+
+        <!-- Columna de sitios de internet -->
         <div class="col-sm-12 col-md-4 section-md-t3">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
+              <h3 class="w-title-a text-brand">Sitios de Interés</h3>
             </div>
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Venezuela</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Pasto</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Philippines</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Tierra</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+        <!-- fin de la columna de sitios de internet --> 
       </div>
     </div>
   </section>
@@ -171,19 +165,19 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="{{ route('Inicio') }}">Inicio</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="{{ route('Trabajos') }}">Trabajos</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="{{ route('Servicios') }}">Servicios</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
+                <a href="{{ route('Clientes') }}">Clientes</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="{{ route('Contacto') }}">Contácto</a>
               </li>
             </ul>
           </nav>
@@ -214,17 +208,17 @@
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
+              <span class="color-a">Bio Paisajes</span> All Rights Reserved.
             </p>
           </div>
+          <!--
           <div class="credits">
-            <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          -->
           </div>
         </div>
       </div>
