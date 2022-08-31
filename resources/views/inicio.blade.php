@@ -1,8 +1,6 @@
 @extends('plantilla')
 <!-- Título de la vista -->
 @section('Titulo','Inicio')
-<!-- Marca de selecionado del menú de navegación -->
-@section('MarcaInicio','active')
 <!-- Contenido principal -->
 @section('Contenido')
 <!-- Carrusel de imágenes -->

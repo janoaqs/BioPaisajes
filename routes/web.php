@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InicioController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\TrabajosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,43 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','inicio')->name('Inicio');
-Route::view('trabajos','trabajos')->name('Trabajos');
-Route::view('servicios', 'servicios')->name('Servicios');
-Route::view('clientes', 'clientes')->name('Clientes');
-Route::view('contacto', 'contacto')->name('Contacto');
-
-
-
-
-
-
-
-/*
-Route::get('/', function () {
-    return view('home');
-});
-*/
-
-/* Parametro obligatorio
-Route::get('saludo/{nombre}', function ($nombre) {
-    return "Saludos ".$nombre;
-});
-*/
-
-/* Parametro predeterminado
-Route::get('saludo/{nombre?}', function ($nombre="invitado") {
-    return "Saludos ".$nombre;
-});
-*/
-
-/*Ruta con nombre
-Route::get('Contactos', function () {
-    return "Sección de contacto";
-})->name("Contacto");
-
-Route::get('/', function () {
-    echo "<a href='".route('Contacto')."'>Contactos</a><br>";  
-});
-*/
+Route::get('/',InicioController::class)->name('Inicio');
+Route::get('trabajos',TrabajosController::class)->name('Trabajos');
+Route::get('servicios',ServiciosController::class)->name('Servicios');
+Route::get('clientes',ClientesController::class)->name('Clientes');
+Route::get('contacto',ContactoController::class)->name('Contacto');
 
